@@ -1,0 +1,6 @@
+[submodule "SharedSource"]
+	path = SharedSource
+	url = https://github.com/AndrewFrazer/SharedSource.git
+[submodule "SubProject"]
+	path = SubProject
+	url = https://github.com/AndrewFrazer/SubProject.git
