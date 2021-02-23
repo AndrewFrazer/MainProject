@@ -33,12 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="SharedSource-ClassLibrary, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\SharedSource-ClassLibrary.1.0.0.1\lib\net472\SharedSource-ClassLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="SubProject-ClassLibrary, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\SubProject-ClassLibrary.1.0.0.2\lib\net472\SubProject-ClassLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,7 +48,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SubProject\SharedSource\SharedSource-ClassLibrary\SharedSource-ClassLibrary.csproj">
+      <Project>{7c4cac38-fcb9-44a9-b322-9dd0fcf404cd}</Project>
+      <Name>SharedSource-ClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SubProject\SubProject-ClassLibrary\SubProject-ClassLibrary.csproj">
+      <Project>{b5367b94-7696-4d57-9881-ffa8f729f6b1}</Project>
+      <Name>SubProject-ClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
